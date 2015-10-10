@@ -1,25 +1,16 @@
-<div class="row-fluid">
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          Contacts
-        </h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-          {{#each model as |contact|}}
-            <li>
-              {{#link-to 'contacts.contact' contact}}
-                {{contact.nameFirst}} {{contact.nameLast}}
-              {{/link-to}}
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-3 col-md-offset-1">
+    <ul class="nav nav-pills">
+      {{#each model as |contact|}}
+        <li role="presentation">
+          {{#link-to 'contacts.contact' contact}}
+            {{contact.nameFirst}} {{contact.nameLast}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
     {{outlet}}
   </div>
 </div>
