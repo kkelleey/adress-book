@@ -1,0 +1,24 @@
+<dl>
+  <dt>
+    Full Name
+  </dt>
+  <dd>
+    {{model.nameFirst}} {{model.nameLast}}
+  </dd>
+  <dt>
+    Email
+  </dt>
+  <dd>
+    {{model.email}}
+  </dd>
+  <dt>
+    Twitter
+  </dt>
+  <dd>
+    {{model.twitter}}
+  </dd>
+</dl>
+<!-- <button {{action 'delete'}}>Delete</button> -->
+{{#bs-button type="primary" action="delete"}}
+  Delete
+{{/bs-button}}

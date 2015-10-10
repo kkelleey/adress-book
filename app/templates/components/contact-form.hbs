@@ -1,0 +1,11 @@
+<label>
+  First Name
+</label>
+<input value={{contact.nameFirst}} oninput={{action (mut contact.nameFirst)
+value="target.value"}}>
+<label>
+  Last Name
+</label>
+<input value={{contact.nameLast}} oninput={{action (mut contact.nameLast)
+value="target.value"}}>
+<button {{action "save"}}>Save</button>
