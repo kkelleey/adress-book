@@ -1,27 +1,15 @@
-<dl>
-  <dt>
-    Full Name
-  </dt>
-  <dd>
-    {{model.nameFirst}} {{model.nameLast}}
-  </dd>
-  <dt>
-    Email
-  </dt>
-  <dd>
-    {{model.email}}
-  </dd>
-  <dt>
-    Twitter
-  </dt>
-  <dd>
-    {{model.twitter}}
-  </dd>
-</dl>
-<!-- <button {{action 'delete'}}>Delete</button> -->
-{{#bs-button type="primary" action="delete" value=model}}
-  Delete
+<h2>
+  {{model.nameFirst}} {{model.nameLast}}
+</h2>
+<h4>
+  Email: {{model.email}}
+</h4>
+<h4>
+  Twitter: {{model.twitter}}
+</h4>
+{{#bs-button action="delete" value=model}}
+  <span class="glyphicon glyphicon-trash"></span>
 {{/bs-button}}
-{{#link-to 'contacts.edit' model class="btn"}}
-  Edit
+{{#link-to 'contacts.edit' model class="btn btn-default"}}
+  <span class="glyphicon glyphicon-edit"></span> Edit
 {{/link-to}}
