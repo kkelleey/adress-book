@@ -1,6 +1,7 @@
-<div class="row">
-  <div class="col-md-3 col-md-offset-1">
-    <ul class="nav nav-pills">
+<div class="row-fluid">
+  <div class="col-md-3">
+    {{link-to 'Add New' 'contacts.new' class='btn btn-primary'}}
+    <ul class="nav nav-pills nav-stacked">
       {{#each model as |contact|}}
         <li role="presentation">
           {{#link-to 'contacts.contact' contact}}
@@ -10,7 +11,7 @@
       {{/each}}
     </ul>
   </div>
-  <div class="col-md-7">
+  <div class="col-md-4">
     {{outlet}}
   </div>
 </div>
